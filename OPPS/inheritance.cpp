@@ -28,6 +28,10 @@ int main(){
     cout<<obj.age<<endl;
     cout<<obj.weight<<endl;
     cout<<obj.height<<endl;
+    obj.setWeight(84);
+    cout<<obj.weight<<endl;
+    obj.sleep();
+
 return 0;
 }
 //inheritance : when one class inherit the property of another class.
