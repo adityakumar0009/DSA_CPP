@@ -36,3 +36,4 @@ return 0;
 }
 //inheritance : when one class inherit the property of another class.
 //for eg : class human whose property is height, age , weight . we make two class male and female where it inherit the propert of human class
+//access modifier : public, private, protected, default.
