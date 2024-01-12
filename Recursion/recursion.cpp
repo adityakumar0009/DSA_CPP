@@ -20,3 +20,6 @@ int main(){
 //in recursion we need base case for where two stop.
 //in recursion we need recurance relation.
 //int recursion base case and recursive relation is mandatory.
+//if base case is not it causes segmenataion fault due to stack overflow.
+//when recursive relation comes at last then it is called tail recursion.
+//when recursive relation comes berore processing then it is called head recursion.
