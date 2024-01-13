@@ -5,7 +5,7 @@ void count(int n){
     if(n==0){
         return ;
     }
-    //recursive relation
+    //recursive relation 
     count(n-1);
     cout<<n<<endl;
     
