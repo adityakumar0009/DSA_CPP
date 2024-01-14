@@ -13,13 +13,13 @@ bool binarysearch(int arr[], int s, int e, int k){
         return binarysearch(arr,mid+1,e,k);
     }
     else{
-        return binarysearch(arr,mid-1,s,k);
+        return binarysearch(arr,s,mid-1,k);
     }
 }
 int main(){
     int arr[6] = {2,4,6,10,14,18};
     int size = 6;
     int key = 14;
-    cout<<"present or not"<<binarysearch(arr,0,5,key)<<endl;
+    cout<<"present or not"<<binarysearch(arr,0,size-1,key)<<endl;
     return 0;
 }
