@@ -9,7 +9,7 @@ bool checkpalindrome(string str, int i, int j){
         return false;
     }
     else{
-        checkpalindrome(str,i+1,j+1);
+        checkpalindrome(str,i+1,j-1);
     }
 }
 int main(){
