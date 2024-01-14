@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 void reverse(string& str,int i, int j){
+    //pass by reference
+    cout<<"call receive for"<<str<<endl;
     //base class
     if(i>j){
         return ;
