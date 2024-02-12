@@ -11,4 +11,6 @@ int main(){
     int first[10] = {1,4,6};
     int n =10;
     printArr(first,10);
+    int firstsize = sizeof(first)/sizeof(int);
+    cout<<"size of first is : "<<firstsize<<endl;
 } 
