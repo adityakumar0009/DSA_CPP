@@ -20,5 +20,10 @@ int main(){
     cout<<"value os b->"<<b<<endl;
     string ab = "asdity";
     reverse(ab.begin(),ab.end());
-    cout<<"string->"<<ab;
+    cout<<"string->"<<ab<<endl;
+    rotate(v.begin(),v.begin()+1,v.end());
+    cout<<"after rotation"<<endl;
+    for(auto i:v){
+        cout<<i<<endl;
+    }
 }
