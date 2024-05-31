@@ -7,12 +7,14 @@ class Grandfather{
     }
 };
 class Father : public Grandfather{
+    public:
     void F_property(){
         cout<<"father also bought around 2 acres of land"<<endl;
     }
     
 };
 class Son : public Grandfather{
+    public:
     void S_property(){
         cout<<"son also brought around 1 acres of land"<<endl;
     }
@@ -20,5 +22,6 @@ class Son : public Grandfather{
 int main(){
     Son s;
     s.property();
+    s.S_property();
 }
 
