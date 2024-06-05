@@ -37,7 +37,7 @@ class stack {
             return arr[topIndex];
         } else {
             cout << "Stack is empty" << endl;
-            return -1; // Return a sentinel value to indicate an empty stack
+            return -1; 
         }
     }
 
@@ -64,4 +64,10 @@ int main() {
     cout << "At peak " << st.top() << endl;
     st.pop();
     cout << "At peak " << st.top() << endl;
+    if(st.isempty()){
+        cout<<"stack is empty"<<endl;
+    }
+    else{
+        cout<<"stock is not empty"<<endl;
+    }
 }
