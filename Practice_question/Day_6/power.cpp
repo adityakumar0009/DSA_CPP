@@ -11,6 +11,8 @@ int power(){
     return ans;
 }
 int main(){
-    cout<<"answer is->"<<power();
+    cout<<"answer is->"<<power()<<endl;;
+    cout<<"answer is->"<<power()<<endl;;
+    cout<<"answer is->"<<power()<<endl;;
     return 0;
 }
