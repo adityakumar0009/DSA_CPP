@@ -4,7 +4,7 @@ using namespace std;
 int intersection(int arr[], int n, int m, int brr[]) {
     int i = 0;
     int j = 0;
-    int ans = 0;
+    // int ans = 0;
     while (i < n && j < m) {
         if (arr[i] == brr[j]) {
             cout<<arr[i]<<" ";
@@ -17,7 +17,7 @@ int intersection(int arr[], int n, int m, int brr[]) {
             j++;
         }
     }
-    return ans;
+    // return ans;
 }
 
 int main() {
