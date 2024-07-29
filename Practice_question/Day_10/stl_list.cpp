@@ -13,5 +13,7 @@ int main(){
     for(int i:l){
         cout<<i<<" ";
     }
+    cout<<endl;
+    cout<<"size of list->"<<l.size();
     return 0;
 }
