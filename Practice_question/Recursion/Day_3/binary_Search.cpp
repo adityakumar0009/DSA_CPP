@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-bool is_binary(int arr[], int s,int e, int key){
+bool is_binary(int arr[], int s, int e, int key){
     //base case
     if(s>e){
         return false;
@@ -17,15 +17,15 @@ bool is_binary(int arr[], int s,int e, int key){
     }
 }
 int main(){
-    int arr[5]={2,4,6,8,9};
+    int arr[5] = {12,4,6,7,1};
     int size = 5;
-    int key = 1;
-    int ans = is_binary(arr,0,4,key);
+    int key = 6;
+    int ans = is_binary(arr,0,9,key);
     if(ans){
-        cout<<"element is present"<<" ";
+        cout<<"element is present"<<endl;
     }
     else{
-        cout<<"element is absent"<<" ";
+        cout<<"element is not present"<<endl;
     }
     return 0;
 }
