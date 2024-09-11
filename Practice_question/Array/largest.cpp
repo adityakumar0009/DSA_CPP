@@ -5,8 +5,8 @@ int main(){
     int size = 5;
     int largest = INT64_MIN;
     for(int i=0; i<size; i++){
-        if(nums[i]>largest){
-            largest = nums[i];
+        if(nums[i]>largest){ //max(nums[i],largest)
+            largest = nums[i]; 
         }
     }
     cout<<"the largest number is->"<<largest<<endl;
