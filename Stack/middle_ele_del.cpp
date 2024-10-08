@@ -1,14 +1,14 @@
 #include<iostream>
 #include<stack>
 using namespace std;
-void deleteMiddle(stack<int>& s, int N, int current ){
-    if(current = N/2){
+void deleteMiddle(stack<int>& s, int size, int count ){
+    if(count = size/2){
         s.pop();
         return ;
     }
     int temp = s.top();
     s.pop();
-    deleteMiddle(s,N,current+1);
+    deleteMiddle(s,size,count+1);
     s.push(temp);
 }
 int main(){
@@ -20,7 +20,8 @@ int main(){
     s.push(3);
     int size = s.size();
     cout<<"the size of the stack is->"<<size<<endl;
-    deleteMiddle(s,size,0);
+    int count = 0;
+    deleteMiddle(s,size,count);
     cout<<"the current size of the stack is->"<<s.size()<<endl;
     return 0;
 }
