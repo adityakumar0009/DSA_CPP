@@ -1,0 +1,70 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.cluster import DBSCAN
+from sklearn.datasets import make_blobs
+from sklearn.preprocessing import StandardScaler
+
+# Generate sample data
+centers = [[1, 1], [-1, -1], [1, -1]]
+X, labels_true = make_blobs(n_samples=750, centers=centers, cluster_std=0.4, random_state=0)
+
+# Standardize the data
+X = StandardScaler().fit_transform(X)
+
+# DBSCAN with min_samples=5 and eps=0.2
+db = DBSCAN(eps=0.2, min_samples=5).fit(X)
+labels = db.labels_
+
+# Number of clusters in labels, ignoring noise (-1 label)
+n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
+n_noise_ = list(labels).count(-1)
+
+# Core points: db.core_sample_indices_
+core_sample_mask = np.zeros_like(labels, dtype=bool)
+core_sample_mask[db.core_sample_indices_] = True
+
+# Noise points (where labels == -1)
+n_noise_pts = np.sum(labels == -1)
+
+# Boundary points: Non-core, non-noise points
+boundary_mask = ~core_sample_mask & (labels != -1)
+n_boundary_pts = np.sum(boundary_mask)
+
+# Core points count
+n_core_pts = np.sum(core_sample_mask)
+
+# Results
+print(f'Number of clusters: {n_clusters_}')
+print(f'Number of core points: {n_core_pts}')
+print(f'Number of boundary points: {n_boundary_pts}')
+print(f'Number of noise points: {n_noise_pts}')
+
+# Plot the results
+unique_labels = set(labels)
+colors = [plt.cm.Spectral(each) for each in np.linspace(0, 1, len(unique_labels))]
+
+for k, col in zip(unique_labels, colors):
+    if k == -1:
+        # Black for noise points
+        col = [0, 0, 0, 1]
+    
+    class_member_mask = (labels == k)
+    
+    # Plot core points
+    xy_core = X[class_member_mask & core_sample_mask]
+    plt.plot(xy_core[:, 0], xy_core[:, 1], 'o', markerfacecolor=tuple(col),
+             markeredgecolor='k', markersize=14, label="Core")
+    
+    # Plot boundary points
+    xy_boundary = X[class_member_mask & boundary_mask]
+    plt.plot(xy_boundary[:, 0], xy_boundary[:, 1], 'o', markerfacecolor=tuple(col),
+             markeredgecolor='k', markersize=6, label="Boundary")
+    
+    # Plot noise points
+    if k == -1:
+        xy_noise = X[class_member_mask]
+        plt.plot(xy_noise[:, 0], xy_noise[:, 1], 'o', markerfacecolor=tuple(col),
+                 markeredgecolor='k', markersize=6, label="Noise")
+
+plt.title(f'Estimated number of clusters: {n_clusters_}')
+plt.show()
