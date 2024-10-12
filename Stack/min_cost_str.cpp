@@ -20,6 +20,7 @@ int min_cost(string str){
             }
         }
     }
+    //invalid part
     int a = 0;
     int b = 0;
     while(!s.empty()){
