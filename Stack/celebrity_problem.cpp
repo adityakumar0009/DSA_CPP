@@ -43,7 +43,7 @@ int main(){
         cout<<"celebrity not found"<<endl;
     }
     else{
-        cout<<"celebrity found"<<endl;
+        cout<<"celebrity found-> "<<celebrity<<endl;
     }
     return 0;
 }
