@@ -1,10 +1,5 @@
 #include<iostream>
 using namespace std;
-void swap(int arr[], int i, int j){
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
 void DNF(int arr[], int n){
     int low = 0;
     int mid = 0;
@@ -12,7 +7,7 @@ void DNF(int arr[], int n){
     while (mid<=high)
     {
         if(arr[mid]==0){
-            swap(arr,mid,low);
+            swap(arr[low],arr[mid]);
             low++;
             mid++;
         }
@@ -20,7 +15,7 @@ void DNF(int arr[], int n){
             mid++;
         }
         else{
-            swap(arr,mid,high);
+            swap(arr[mid],arr[high]);
             high--;
         }
     }
