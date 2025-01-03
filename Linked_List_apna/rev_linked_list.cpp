@@ -2,9 +2,12 @@
 using namespace std;
 class ListNode{
     public:
-    int val;
+    int data;
     ListNode* next;
-    ListNode(int x) : val(x), next(NULL) {}
+    ListNode(int val){
+        data = val;
+        next = NULL;
+    }
 };
 class solution{
     public:
@@ -23,7 +26,7 @@ class solution{
 };
 void printList(ListNode* head){
     while(head!=NULL){
-        cout<<head->val<<" ";
+        cout<<head->data<<" ";
         head = head->next;
     }
     cout<<endl;
