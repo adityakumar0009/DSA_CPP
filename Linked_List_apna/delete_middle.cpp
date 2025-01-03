@@ -11,21 +11,28 @@ class ListNode{
 };
 class solution{
     public:
-    ListNode* middleNode(ListNode* head){
+    ListNode* del_mid(ListNode* head){
+        if(head==NULL || head->next==NULL){
+            delete head;
+            return NULL;
+        }
         ListNode* slow = head;
         ListNode* fast = head;
+        ListNode* prev = NULL;
         while(fast!=NULL && fast->next!=NULL){
+            prev = slow;
             slow = slow->next;
             fast = fast->next->next;
         }
-        return slow;
+        prev->next = slow->next;
+        delete slow;
+        return head;
     }
 };
 void printlist(ListNode* head){
-    while (head!=NULL)
-    {
+    while(head!=NULL){
         cout<<head->data<<" ";
-        head = head->next;
+        head=head->next;
     }
     cout<<endl;
 }
@@ -33,12 +40,13 @@ int main(){
     ListNode* head = new ListNode(1);
     head->next = new ListNode(2);
     head->next->next = new ListNode(3);
-    cout<<"original list ";
+    head->next->next->next = new ListNode(4);
+    head->next->next->next->next = new ListNode(5);
+    cout<<"original list "<<" ";
     printlist(head);
-    //middle
     solution sol;
-    ListNode* insert_mid = sol.middleNode(head);
-    cout<<"middle element"<<" ";
-    printlist(insert_mid);
+    ListNode* del = sol.del_mid(head);
+    cout<<"delete middle element ";
+    printlist(del);
     return 0;
 }
