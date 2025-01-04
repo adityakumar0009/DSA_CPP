@@ -39,7 +39,7 @@ int main(){
     head->next->next->next = new ListNode(-4);
     head->next->next->next->next = head->next;
     solution sol;
-    if (sol.hascycle(head))
+    if(sol.hascycle(head))
     {
         cout << "The list has a cycle." << endl;
     }
