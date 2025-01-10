@@ -1,7 +1,6 @@
-  // while(d){
-    //     ptr1 = ptr1->next;
-    //     if(ptr1==NULL){
-    //         return -1;
-    //     }
-    //     d--;
-    // }
+cll.insertAthead(1);
+    // cll.insertAthead(2);
+    // cll.insertAthead(3);
+    // cll.print();
+
+    // cout<<endl;
