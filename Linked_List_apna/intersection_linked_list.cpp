@@ -40,6 +40,7 @@ int intersection(Node* &head1, Node* &head2){
         ptr2 = head2;
     }
     else{
+        d = l2-l1;
         ptr1 = head2;
         ptr2 = head1;
     }
