@@ -1,6 +1,7 @@
-  // cout<<endl;
-    // dll.push_back(1);
-    // dll.push_back(2);
-    // dll.push_back(3);
-
-    // dll.print();
+  // while(d){
+    //     ptr1 = ptr1->next;
+    //     if(ptr1==NULL){
+    //         return -1;
+    //     }
+    //     d--;
+    // }

@@ -21,11 +21,15 @@ int length(Node* head){
 }
 
 Node* kmapped(Node* &head, int k){
+    if(head==NULL){
+        return NULL;
+    }
     Node* newhead;
     Node* newtail;
     Node* tail = head;
     int count = 1;
     int l = length(head);
+    k=k%l;
     while (tail->next!=NULL){
         if(count==l-k){
             newtail = tail;
