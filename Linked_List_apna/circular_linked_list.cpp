@@ -42,6 +42,46 @@ class circularList{
             tail = newNode;
         }
     }
+
+    void deleteAthead(){
+        if(head==NULL){
+            return;
+        }
+        else if(head==tail){
+            delete head;
+            head = tail =NULL;
+        }
+        else{
+            Node* temp = head;
+            head = head->next;
+            tail->next = head;
+            temp->next = NULL;
+            delete temp;
+        }
+    }
+
+    void deleteAttail(){
+        if(head==NULL){
+            return ;
+        }
+        else if(head==tail){
+            delete head;
+            head = tail = NULL;
+        }
+        else{
+            Node* temp = tail;
+            Node* prev = head;
+            while (prev->next!=tail)
+            {
+                prev=prev->next;
+            }
+            tail = prev;
+            temp->next = head;
+            temp->next = NULL;
+            delete temp;
+        }
+    }
+
     void print(){
         if(head==NULL){
             return;
@@ -69,6 +109,18 @@ int main(){
     cll.insertAttail(1);
     cll.insertAttail(2);
     cll.insertAttail(3);
+
+    // cll.deleteAthead();
+    // cll.deleteAthead();
+    cll.print();
+
+    cll.deleteAttail();
+    cll.print();
+
+    cll.deleteAttail();
+    cll.print();
+
+    cll.deleteAttail();
     cll.print();
     return 0;
 }
