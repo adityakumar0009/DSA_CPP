@@ -4,7 +4,7 @@ using namespace std;
 void rev_sen(string s){
     stack<string> st;
     for(int i=0; i<s.length(); i++){
-        string words = " ";
+        string words = "";
         while(s[i]!=' ' && s.length()){
             words+=s[i];
             i++;
