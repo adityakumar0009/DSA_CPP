@@ -17,7 +17,7 @@ int precedence(char ch){
 }
 
 string infix_postfix(string s){
-    stack<int> st;
+    stack<char> st;
     string res;
     for(int i=0; i<s.length(); i++){
         if((s[i]>='a'&& s[i]<='z') || (s[i]>='A' && s[i]<='Z')){
