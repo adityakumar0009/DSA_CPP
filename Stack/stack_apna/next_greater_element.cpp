@@ -25,3 +25,5 @@ int main(){
     cout<<endl;
     return 0;
 }
+// bJBPSFXeQLGtB9n7
+// mongosh "mongodb+srv://cluster0.txxwb.mongodb.net/" --apiVersion 1 --username adityakumar79915
