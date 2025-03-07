@@ -8,7 +8,6 @@ int max_sub_sum(vector<int> &nums){
     for(int i=0; i<nums.size(); i++){
         curr_sum+=nums[i];
         max_sum = max(curr_sum,max_sum);
-
         if(curr_sum<0){
             curr_sum = 0;
         }
