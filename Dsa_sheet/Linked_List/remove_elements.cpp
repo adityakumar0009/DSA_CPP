@@ -31,12 +31,21 @@ class Solution{
         return head;
     }
 };
-
+void printList(ListNode* head){
+    while(head!=NULL){
+        cout<<head->data<<" ";
+        head = head->next;
+    }
+    cout<<endl;
+}
 int main(){
     ListNode *head = new ListNode(1);
     head->next = new ListNode(2);
     head->next->next = new ListNode(3);
     printList(head);
     Solution sol;
+    int val = 3;
+    ListNode* ans = sol.remove_elemnt(head,val);
+    printList(head);
     return 0;
 }
