@@ -1,36 +1,43 @@
 #include<iostream>
-#include<queue>
+#include<stack>
 using namespace std;
-class mystack{
+class myqueue{
     public:
-    queue<int> q1;
-    queue<int> q2;
-    mystack(){
+    stack<int> s1;
+    stack<int> s2;
+    myqueue(){
 
     }
     void push(int x){
-        while(!q1.empty()){
-            q2.push(q1.front());
-            q1.pop();
+        while(!s1.empty()){
+            s2.push(s1.top());
+            s1.pop();
         }
-        q1.push(x);
-        while(!q2.empty()){
-            q1.push(q2.front());
-            q2.pop();
+        s1.push(x);
+        while(!s2.empty()){
+            s1.push(s2.top());
+            s2.pop();
         }
     }
     int pop(){
-        int ans = q1.front();
-        q1.pop();
+        int ans = s1.top();
+        s1.pop();
         return ans;
     }
-    int top(){
-        return q1.front();
+    int peek(){
+        return s1.top();
     }
     bool empty(){
-        return q1.empty();
+        return s1.empty();
     }
 };
 int main(){
+    myqueue q;
+    q.push(10);
+    q.push(20);
+    q.push(30);
+    cout << "Top element: " << q.peek() << endl;
+    cout << "Popped: " << q.pop() << endl;
+    cout << "Stack empty? " << (q.empty() ? "Yes" : "No") << endl;
     return 0;
 }
