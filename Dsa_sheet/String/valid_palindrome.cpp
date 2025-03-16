@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 bool alpha_num(char ch){
-    if((ch>='0' && ch<='9') || (tolower(ch)<='a' && tolower(ch)>='z')){
+    if((ch>='0' && ch<='9') || (tolower(ch)>='a' && tolower(ch)<='z')){
         return true;
     }
     return false;
@@ -19,9 +19,10 @@ bool is_palindrome(string s){
             continue;
         }
         if(tolower(s[st])!=tolower(s[end])){
-            st++;
-            end--;
+            return false;
         }
+        st++;
+        end--;
     }
     return true;
 }
