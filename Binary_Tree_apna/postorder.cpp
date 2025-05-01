@@ -1,4 +1,3 @@
-//inorder traversal
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -14,7 +13,7 @@ class Node{
     }
 };
 static int index = -1;
-Node* buildTree(vector<int>& preorder){
+Node* buildTree(vector<int> &preorder){
     index++;
     if(preorder[index]==-1){
         return NULL;
@@ -24,18 +23,11 @@ Node* buildTree(vector<int>& preorder){
     root->right = buildTree(preorder);
     return root;
 };
-void inorder(Node* root){
-    if(root==NULL){
-        return;
-    }
-    inorder(root->left);
-    cout<<root->data<<" ";
-    inorder(root->right);
+void postorder(Node* root){
+    
 }
 int main(){
     vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
     Node *root = buildTree(preorder);
-    inorder(root);
     return 0;
 }
-//inorder = left,root,right
