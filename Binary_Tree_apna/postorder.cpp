@@ -1,3 +1,4 @@
+//postorder traversal
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -24,10 +25,17 @@ Node* buildTree(vector<int> &preorder){
     return root;
 };
 void postorder(Node* root){
-    
+    if(root==NULL){
+        return ;
+    }
+    postorder(root->left);
+    postorder(root->right);
+    cout<<root->data<<" ";
 }
 int main(){
     vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
     Node *root = buildTree(preorder);
+    postorder(root);
     return 0;
 }
+//postorder = left,right,root
