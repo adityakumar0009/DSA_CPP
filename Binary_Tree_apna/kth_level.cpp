@@ -34,7 +34,7 @@ void kth_level(Node* root,int k){
     kth_level(root->right,k-1);
 }
 int main(){
-    vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
+    vector<int> preorder = {1, 2,7, -1, -1,-1, 3, 4, -1, -1, 5, -1, -1};
     Node *root = buildTree(preorder);
     kth_level(root,3);
     return 0;
