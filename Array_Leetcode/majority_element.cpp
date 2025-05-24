@@ -1,8 +1,10 @@
 #include<iostream>
 #include<vector>
+#include<algorithm>
 using namespace std;
 int majority_element(vector<int>& arr){
     int n = arr.size();
+    sort(arr.begin(),arr.end());
     int freq = 1;
     int ans = arr[0];
     for(int i=1; i<n; i++){
