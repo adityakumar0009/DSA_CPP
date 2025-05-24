@@ -3,15 +3,15 @@
 using namespace std;
 int majority_element(vector<int>& nums){
     int n = nums.size();
-    for(int val : nums){
+    for(int i=0; i<n; i++){
         int freq = 0;
-        for(int el: nums){
-            if(val == el){
+        for(int j=0; j<n; j++){
+            if(i == j){
                 freq++;
             }
         }
         if(freq>n/2){
-            return val;
+            return i;
         }
     }
 }
