@@ -9,8 +9,8 @@ int largest_perimeter(vector<int>& nums){
         if(nums[i]+nums[i+1]>nums[i+2]){
             return nums[i] + nums[i+1] + nums[i+2];
         }
-        return 0;
     }
+    return 0;
 }
 int main(){
     vector<int> nums = {2, 1, 2};
