@@ -3,9 +3,9 @@
 using namespace std;
 int sub_array(vector<int>& nums,int k){
     int count = 0;
-    for(int i=0; i<nums.size(); i++){
+    for(int i=0; i<nums.size(); i++){//starting point
         int sum = 0;
-        for(int j=i; j<nums.size(); j++){
+        for(int j=i; j<nums.size(); j++){//ending point
             sum+=nums[i];
             if(sum==k){
                 count++;
