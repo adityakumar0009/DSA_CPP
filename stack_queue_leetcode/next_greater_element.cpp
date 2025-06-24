@@ -4,7 +4,7 @@
 using namespace std;
 int main(){
     vector<int> arr = {6,8,0,1,3};
-    vector<int> ans(arr.size());
+    vector<int> ans(arr.size(),0);
     //next greater element
     stack<int> st;
     for(int i=arr.size()-1; i>=0; i--){
