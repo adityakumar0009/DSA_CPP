@@ -1,3 +1,4 @@
+// count the total number of nodes in the tree.
 #include<iostream>
 #include<vector>
 using namespace std;
