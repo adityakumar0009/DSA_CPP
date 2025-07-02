@@ -1,4 +1,3 @@
-// Given the roots of two binary trees, write a function to check whether both trees are identical.
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -14,15 +13,16 @@ class Node{
     }
 };
 static int index = -1;
-Node* buildTree(vector<int>& preorder,int &index){
+Node* buildTree(vector<int>& preorder){
     index++;
     if(preorder[index]==-1){
         return NULL;
     }
     Node* root = new Node(preorder[index]);
-    root->left = buildTree(preorder,index);
-    root->right = buildTree(preorder,index);
-};
+    root->left = buildTree(preorder);
+    root->right = buildTree(preorder);
+    return root;
+}
 bool is_identical(Node* p,Node* q){
     if(p==NULL && q==NULL){
         return true;
@@ -34,18 +34,27 @@ bool is_identical(Node* p,Node* q){
     bool right_subtree = is_identical(p->right,q->right);
     return left_subtree && right_subtree && p->data==q->data;
 }
+bool is_subtree(Node* root,Node* subroot){
+    if(root==NULL){
+        return false;
+    }
+    if(is_identical(root,subroot)){
+        return true;
+    }
+    return is_subtree(root->left,subroot) || is_subtree(root->right,subroot);
+}
 int main(){
     vector<int> preorder1 = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
-    vector<int> preorder2 = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
-    int index1 = -1;
-    int index2 = -1;
-    Node* root1 = buildTree(preorder1,index1);
-    Node* root2 = buildTree(preorder2,index2);
-    if(is_identical(root1,root2)){
-        cout<<"it is a identical tree "<<endl;
+    vector<int> preorder2 = {3, 4, -1, -1, 5, -1, -1};
+    index = -1;
+    Node *root = buildTree(preorder1);
+    index = -1;
+    Node *subroot = buildTree(preorder2);
+    if(is_subtree(root,subroot)){
+        cout<<"it is a subtree "<<endl;
     }
     else{
-        cout<<"it is not a identical tree "<<endl;
+        cout<<"it is not a subtree "<<endl;
     }
     return 0;
 }
