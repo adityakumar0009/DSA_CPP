@@ -1,4 +1,4 @@
-// Given the root of a binary tree, return the diameter of the tree.
+// Given the root of a binary tree, write a function to calculate the sum of all nodes' values in the tree.
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -23,26 +23,17 @@ Node* buildTree(vector<int>& preorder){
     root->left = buildTree(preorder);
     root->right = buildTree(preorder);
 }
-int height(Node* root){
+int sum_node(Node* root){
     if(root==NULL){
         return 0;
     }
-    int left_subtree = height(root->left);
-    int right_subtree = height(root->right);
-    return max(left_subtree,right_subtree)+1;
-}
-int diameter(Node* root){
-    if(root==NULL){
-        return 0;
-    }
-    int left_diameter = diameter(root->left);
-    int right_diameter = diameter(root->right);
-    int curr_diameter = height(root->left) + height(root->right);
-    return max((left_diameter,right_diameter),curr_diameter);
+    int left_subtree = sum_node(root->left);
+    int right_subtree = sum_node(root->right);
+    return left_subtree+right_subtree+root->data;
 }
 int main(){
     vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
     Node* root = buildTree(preorder);
-    cout<<"diameter of the tree is -> "<<diameter(root);
+    cout<<"sum of node of a tree is -> "<<sum_node(root);
     return 0;
 }
