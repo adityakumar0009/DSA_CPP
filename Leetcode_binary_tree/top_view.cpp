@@ -1,3 +1,4 @@
+// The top view of a binary tree is the set of nodes visible when the tree is viewed from the top. For each vertical line (based on horizontal distance from the root), only the first node encountered (from top to bottom) is included in the top view.
 #include<iostream>
 #include<vector>
 #include<queue>
