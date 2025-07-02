@@ -1,3 +1,4 @@
+// check whether subRoot is a subtree of root.
 #include<iostream>
 #include<vector>
 using namespace std;
