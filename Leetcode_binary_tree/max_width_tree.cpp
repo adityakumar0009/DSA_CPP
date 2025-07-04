@@ -1,3 +1,4 @@
+// The width of a level is defined as the length between the leftmost and rightmost non-null nodes at that level, including the null nodes in between.
 #include<iostream>
 #include<queue>
 #include<algorithm>
