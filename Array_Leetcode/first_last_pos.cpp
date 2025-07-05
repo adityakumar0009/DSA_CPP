@@ -55,5 +55,4 @@ int main(){
     cout << "First and last position of " << target << ": ";
     cout << "[" << result[0] << ", " << result[1] << "]" << endl;
     return 0;
-    return 0;
 }
