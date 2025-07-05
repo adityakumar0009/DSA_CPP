@@ -1,3 +1,4 @@
+//inorder precedoor is right most of left subtree
 #include<iostream>
 #include<vector>
 using namespace std;
