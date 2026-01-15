@@ -20,3 +20,9 @@ int main(){
         cout<<i<<" ";
     }
 }
+
+//push back and push front
+//emplace back and emplace front
+//pop back and pop front
+
+//implemented as a doubly linked list

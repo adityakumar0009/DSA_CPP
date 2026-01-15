@@ -7,7 +7,7 @@ int bin_to_decimal(int binary){
     {
        int rem = binary%10;
        binary = binary/10;
-       ans+=rem*power;
+       ans += rem * power;
        power = power*2;
     }
     return ans;

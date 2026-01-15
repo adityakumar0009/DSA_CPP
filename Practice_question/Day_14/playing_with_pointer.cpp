@@ -10,5 +10,10 @@ int main(){
     cout<<&arr[1]<<endl;
     cout<<arr[2]<<endl;
     cout<<*(arr+2)<<endl;
+
+    int *p = &arr[0];
+    cout<<p<<endl;
+    cout<<*p<<endl;
+    cout<<&p<<endl;
     return 0;
 }

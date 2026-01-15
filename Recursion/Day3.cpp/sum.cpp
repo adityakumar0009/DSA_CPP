@@ -1,21 +1,19 @@
 #include<iostream>
 using namespace std;
-int getsum(int arr[],int size){
+int get_sum(int arr[],int size){
     if(size==0){
         return 0;
     }
-    if(size == 1){
+    if(size==1){
         return arr[0];
     }
-    else{
-        int remaining = getsum(arr+1,size-1);
-        int sum = arr[0] + remaining;
-        return sum;
-    }
+    int remaining = get_sum(arr+1,size-1);
+    int ans = arr[0]+remaining;
+    return ans;
 }
 int main(){
-    int arr[] = {2,3,4,5,6};
+    int arr[] = {2,5,6,8,3};
     int size = 5;
-    int ans = getsum(arr,size);
-    cout<<"sum is -> "<<ans<<endl;
+    cout<<get_sum(arr,size);
+    return 0;
 }

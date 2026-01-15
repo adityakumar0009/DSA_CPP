@@ -5,6 +5,7 @@ using namespace std;
 void next_purmutation(vector<int>& nums){
     int pivot = -1;
     int n = nums.size();
+    //find pivot
     for(int i=n-2; i>=0; i--){
         if(nums[i]<nums[i+1]){
             pivot = i;
@@ -14,6 +15,7 @@ void next_purmutation(vector<int>& nums){
     if(pivot==-1){
         reverse(nums.begin(),nums.end());
     }
+    //right most element jo bada ho pivot se
     for(int i=n-1; i>=0; i--){
         if(nums[i]>nums[pivot]){
             swap(nums[i],nums[pivot]);

@@ -12,5 +12,6 @@ void count_digit(int n){
 int main(){
     int n = 3478;
     count_digit(n);
+    // cout<<(int)(log10(n)+1)<<endl;
     return 0;
 }

@@ -27,14 +27,14 @@ Node* buildTree(vector<int>& preorder){
     return root;
 }
 void top_view(Node* root){
-    queue<pair<Node*,int>>q;
-    map<int,int> m;
+    queue<pair<Node*,int>>q; //node,hd
+    map<int,int> m; //<HD,Node val>
     q.push({root,0});
     while(q.size()>0){
         Node* curr = q.front().first;
         int currHD = q.front().second;
         q.pop();
-        if(m.find(currHD)==m.end()){
+        if(m.find(currHD)==m.end()){ //agar hd nahi milta hia to
             m[currHD] = curr->data;
         }
         if(curr->left!=NULL){

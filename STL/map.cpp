@@ -21,3 +21,10 @@ int main(){
         cout<<i.first<<endl;
     }
 }
+
+//key should be unique and data is present in sorted way
+
+// C++ Iterators
+//     Iterators are used to access and iterate through elements of data
+//     structures(vectors, sets, etc.),
+//     by "pointing" to them.

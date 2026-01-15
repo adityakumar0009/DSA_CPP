@@ -18,3 +18,4 @@ int main(){
     cout<<s<<endl;
 
 }
+//array pointer is a constant pointer we cant change throughout

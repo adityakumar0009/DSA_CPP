@@ -8,10 +8,17 @@ int main(){
     for(int i:d){
         cout<<i<<" ";
     }
-    cout<<"first element index"<<d.at(1)<<endl;
     cout<<endl;
     d.pop_front();
     for(int i:d){
         cout<<i<<" ";
     }
 }
+// deque - > doubly ended queue
+// Dequeue - > pop
+
+// push_back and push_front
+// pop_back and pop_front
+// emplace_back and empplace_front
+
+// random access possible because of dynamic array

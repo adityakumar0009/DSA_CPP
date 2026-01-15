@@ -8,6 +8,14 @@ class Adi{
     void print(){
         cout<<weight<<endl;
     }
+    Adi(){
+        cout<<"constructor called"<<endl;
+    }
+    // parameterized constructor
+    Adi(int age){
+        cout<<"this->"<<this<<endl;
+        this->age = age;
+    }
 
     int getAge(){
         return age;
@@ -26,12 +34,18 @@ class Adi{
     }
 };
 int main(){
+
+    // statically
     Adi Aditya;
-    // Aditya.Age= 21;
-    Aditya.weight=31;
-    cout<<"age of aditya->"<<Aditya.getAge()<<endl;
-    Aditya.setAge(34);
-    cout<<"age of aditya->"<<Aditya.getAge()<<endl;
-    cout<<"weight of aditya->"<<Aditya.weight<<endl;
-    return 0;
+    cout<<"address of aditya is->"<<&Aditya<<endl;
+    Aditya.getAge();
+    // dynamically
+    Adi* h = new Adi();
+    // // Aditya.Age= 21;
+    // Aditya.weight=31;
+    // cout<<"age of aditya->"<<Aditya.getAge()<<endl;
+    // Aditya.setAge(34);
+    // cout<<"age of aditya->"<<Aditya.getAge()<<endl;
+    // cout<<"weight of aditya->"<<Aditya.weight<<endl;
+    // return 0;
 }

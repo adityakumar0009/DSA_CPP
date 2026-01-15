@@ -7,7 +7,8 @@ void update(int **p2){
     //*p2 = *p2+1;
     //kuch change nahi hoga   yes
 
-    **p2= **p2+1;
+    //**p2= **p2+1;
+    //kuch change hoga     yes
 }
 int main(){
     int i =5;

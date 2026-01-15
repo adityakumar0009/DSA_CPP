@@ -10,9 +10,11 @@ int power(int a, int b){
     }
     //recursive relation
     int ans = power(a,b/2);
+    //if b is even
     if(b%2==0){
         return ans*ans;
     }
+    //if b is odd
     else{
         return a*ans*ans;
     }

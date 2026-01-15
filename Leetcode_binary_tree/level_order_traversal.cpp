@@ -34,7 +34,7 @@ void level_traversal(Node* root){
             if(!q.empty()){
                 cout<<endl;
                 q.push(NULL);
-                continue;;
+                continue;
             }
             else{
                 break;

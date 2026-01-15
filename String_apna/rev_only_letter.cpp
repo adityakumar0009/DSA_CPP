@@ -19,7 +19,7 @@ string reverse_letter(string& s){
     return s;
 }
 int main(){
-    string s = "ab-cd";
+    string s = "xab-cd";
     cout<<"reverse only letter "<<reverse_letter(s);
     return 0;
 }

@@ -19,7 +19,7 @@ int main(){
 
 
 
-//encapculation : wrapping up data member and function
+//encapculation : wrapping up data and member function
 //fully encapculated class : all data memebers are private marked, access in same class.
 //advantage : for information hiding,data hiding.
 //advantage : security increases.

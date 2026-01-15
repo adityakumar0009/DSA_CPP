@@ -23,6 +23,7 @@ Node* buildTree(vector<int>& prorder){
     Node* root = new Node(prorder[index]);
     root->left = buildTree(prorder);
     root->right = buildTree(prorder);
+    return root;
 }
 int main(){
     vector<int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};

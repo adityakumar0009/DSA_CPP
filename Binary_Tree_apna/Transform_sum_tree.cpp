@@ -1,6 +1,7 @@
+// Given the root of a binary tree, transform it into a Sum Tree, where each node's value is replaced by the sum of all values in its left and right subtrees.
 #include<iostream>
 #include<vector>
-using namespace std;
+    using namespace std;
 class Node{
     public:
     int data;

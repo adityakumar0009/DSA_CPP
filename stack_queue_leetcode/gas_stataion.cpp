@@ -10,7 +10,7 @@ int gas_station(vector<int>& gas,vector<int>& cost){
     for(int i=0; i<cost.size(); i++){
         total_cost+=cost[i];
     }
-    if(total_gas>total_cost){
+    if(total_cost>total_gas){
         return -1;
     }
     //unique solution

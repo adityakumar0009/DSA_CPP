@@ -1,0 +1,19 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int removeElement(vector<int>& nums, int val) {
+    int k =0;
+    for(int i=0; i<nums.size(); i++){
+        if(nums[i] != val){
+            nums[k] = nums[i];
+            k++;
+        }
+    }
+    return k;
+    }
+int main(){
+    vector<int> nums = {3, 2, 2, 3};
+    int val = 3;
+    cout << "the number of elements in nums which are not equal to val. "<<removeElement(nums,val);
+    return 0;
+}

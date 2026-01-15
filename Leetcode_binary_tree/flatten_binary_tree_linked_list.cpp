@@ -42,3 +42,4 @@ int main(){
     print(root);
     return 0;
 }
+//inverse preorder

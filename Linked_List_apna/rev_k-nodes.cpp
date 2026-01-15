@@ -21,6 +21,7 @@ Listnode* rev_node(Listnode* head, int k){
     }
     //recurcively call next
     Listnode* prevNode = rev_node(temp,k);
+    //reverse current group
     temp = head;
     count = 0;
     while(count<k){

@@ -9,5 +9,5 @@ int main(){
     cout<<"elements"<<" "<<s.front()<<endl;
     s.pop();
     cout<<"elements"<<" "<<s.size()<<endl;   
-      cout<<"elements"<<" "<<s.front()<<endl;
+    cout<<"elements"<<" "<<s.front()<<endl;
 }

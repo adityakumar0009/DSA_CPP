@@ -13,6 +13,7 @@ bool isbinarysearch(int arr[], int s, int e, int k){
         return false;
     }
     int mid = s+(e-s)/2;
+    cout<<"value of mid is->"<<arr[mid]<<endl;
     if(arr[mid] == k){
         return true;
     }
